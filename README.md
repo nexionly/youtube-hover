@@ -1,5 +1,7 @@
 # YouTube Hover 🎬
 
+![YouTube Hover Screenshot](YouTube%20Hover/images/screenshot.png)
+
 Float YouTube videos above all your Mac apps with one click. 
 
 A sleek, native-feeling Chrome extension that leverages the Picture-in-Picture API to detach YouTube videos into an OS-level floating window. Perfect for watching tutorials, podcasts, or music videos while working in other apps.
