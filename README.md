@@ -7,7 +7,6 @@ A sleek, native-feeling Chrome extension that leverages the Picture-in-Picture A
 ## Features
 
 - **Native Floating Window**: Stays on top of all macOS applications (Slack, Finder, Notes, etc.).
-- **Global Keyboard Shortcut**: Press `Cmd + Shift + P` from any app to toggle hover mode instantly.
 - **In-Player Controls**: A subtle, beautiful hover button injected directly into the YouTube player.
 - **Premium Dark UI**: A polished extension popup that matches YouTube's aesthetic.
 - **Survives Minimize**: The floating window persists even if you minimize the Chrome browser window.
@@ -27,10 +26,9 @@ Since this extension is not yet published on the Chrome Web Store, you can insta
 
 1. Open any [YouTube](https://youtube.com) video.
 2. **Method 1**: Click the "Hover" button that appears in the bottom-right corner of the video player.
-3. **Method 2**: Press `Cmd + Shift + P` on your keyboard.
-4. **Method 3**: Click the extension icon in your Chrome toolbar and select "Hover Video".
+3. **Method 2**: Click the extension icon in your Chrome toolbar and select "Hover Video".
 
-To return the video to the browser, simply click the exit button on the floating window, use the shortcut again, or click "Exit Hover" in the player.
+To return the video to the browser, simply click the exit button on the floating window, or click "Exit Hover" in the player.
 
 ## Technologies Used
 
