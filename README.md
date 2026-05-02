@@ -36,6 +36,10 @@ To return the video to the browser, simply click the exit button on the floating
 - HTML/CSS/JavaScript (Vanilla)
 - Native HTMLVideoElement `requestPictureInPicture()` API
 
+## Credits
+
+This project was built with Antigravity, an advanced agentic coding assistant developed by the Google DeepMind team.
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
