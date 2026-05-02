@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# Chrome Extension build/temp
+*.crx
+*.pem
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary directories
+.tmp/

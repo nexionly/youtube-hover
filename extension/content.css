@@ -1,0 +1,105 @@
+/* =============================================
+   YouTube Hover — Content Script Styles
+   Injected overlay button on YouTube pages
+   ============================================= */
+
+/* ── Floating PiP Button ── */
+#yt-hover-pip-btn {
+  position: absolute;
+  z-index: 2147483647;
+  bottom: 60px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 14px 8px 11px;
+  background: rgba(15, 15, 15, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  color: #fff;
+  font-family: 'Roboto', -apple-system, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(4px) scale(0.96);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+  pointer-events: auto;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  white-space: nowrap;
+  user-select: none;
+}
+
+#yt-hover-pip-btn .yt-hover-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#yt-hover-pip-btn .yt-hover-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+#yt-hover-pip-btn:hover {
+  background: rgba(255, 30, 30, 0.85);
+  box-shadow: 0 6px 28px rgba(255, 30, 30, 0.35);
+  transform: translateY(0) scale(1);
+}
+
+#yt-hover-pip-btn.yt-hover-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+#yt-hover-pip-btn.yt-hover-active {
+  background: rgba(255, 30, 30, 0.9);
+  box-shadow: 0 6px 28px rgba(255, 30, 30, 0.4);
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* ── Video container positioning context ── */
+.html5-video-container,
+ytd-player,
+#movie_player {
+  position: relative !important;
+}
+
+/* ── Toast notification ── */
+#yt-hover-toast {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  z-index: 2147483647;
+  background: rgba(15, 15, 15, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 14px;
+  color: #fff;
+  font-family: 'Roboto', -apple-system, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 10px 20px;
+  opacity: 0;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+
+#yt-hover-toast.yt-hover-toast-show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}

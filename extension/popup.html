@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YouTube Hover</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="logo">
+      <img src="icons/icon128.png" alt="YouTube Hover" />
+    </div>
+    <div class="header-text">
+      <h1>YouTube Hover</h1>
+      <p>Float video above all apps</p>
+    </div>
+  </div>
+
+  <!-- YouTube tab content -->
+  <div id="yt-content" style="display:none;">
+    <!-- Status -->
+    <div class="status-badge">
+      <div class="status-dot" id="status-dot"></div>
+      <span class="status-text" id="status-text">Checking...</span>
+    </div>
+
+    <!-- Main CTA -->
+    <div class="pip-btn-wrap">
+      <button id="pip-btn" disabled>
+        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="4" width="20" height="14" rx="2"/>
+          <rect x="12" y="11" width="9" height="7" rx="1.5" fill="currentColor" stroke="none"/>
+        </svg>
+        <span id="pip-btn-label">Hover Video</span>
+      </button>
+    </div>
+
+    <!-- Info cards -->
+    <div class="cards">
+      <div class="card">
+        <div class="card-label">Mode</div>
+        <div class="card-value" id="card-mode">—</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Shortcut</div>
+        <div class="card-value">⌘⇧P</div>
+      </div>
+    </div>
+
+    <!-- Shortcut hint -->
+    <div class="shortcut-hint">
+      Press <kbd>⌘</kbd><kbd>⇧</kbd><kbd>P</kbd> from any app to toggle
+    </div>
+  </div>
+
+  <!-- Not on YouTube -->
+  <div id="not-yt-content" style="display:none;">
+    <div class="not-yt">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M23.5 6.19a3 3 0 00-2.11-2.12C19.47 3.5 12 3.5 12 3.5s-7.47 0-9.39.57A3 3 0 00.5 6.19C0 8.12 0 12.15 0 12.15s0 4.03.5 5.96a3 3 0 002.11 2.12c1.92.57 9.39.57 9.39.57s7.47 0 9.39-.57a3 3 0 002.11-2.12c.5-1.93.5-5.96.5-5.96s0-4.03-.5-5.96zM9.75 15.51v-6.7l6.28 3.35-6.28 3.35z"/>
+      </svg>
+      Open a YouTube video to use Hover
+      <button id="open-yt-btn">Open YouTube</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <span class="footer-text">Uses native Picture-in-Picture API</span>
+    <span class="footer-text">v1.0</span>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
